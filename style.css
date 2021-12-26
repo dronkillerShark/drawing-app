@@ -7,7 +7,13 @@
 .rest{
     position: relative;
     top:-350px;
-    left: 700px;
+    left: 800px;
+}
+
+.erase{
+    position: relative;
+    top:-350px;
+    left: 670px;
 }
 
 .changeSize{
