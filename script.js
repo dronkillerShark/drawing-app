@@ -48,10 +48,12 @@ const removePixel = function(e){
 }
 
 drawingCanvas.addEventListener("pointermove", (e) =>{
-    drawingCanvas.addEventListener("pointerdown", (e) =>{    
+    drawingCanvas.addEventListener("pointerdown", (e) =>{  
+        document.body.style.cursor = 'pointer';
         isDown = true;
     })
     drawingCanvas.addEventListener("pointerup", (e) =>{
+        document.body.style.cursor = 'default';
         isDown = false;
     })
     if(isDown && !isErase){
