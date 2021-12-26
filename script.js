@@ -24,7 +24,7 @@ changeColorButton.addEventListener("click", (e) => {
     if(redInp.value == "") redInp.value = 0;
     if(blueInp.value == "") blueInp.value = 0;
     if(greenInp.value == "") greenInp.value = 0;
-    if(!greenInp.value 
+    if(!greenInp.value
         || 
         !blueInp.value 
         ||
