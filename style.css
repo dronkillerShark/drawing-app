@@ -1,18 +1,18 @@
 .drawingCanvas{
     position: relative;
-    top:150px;
+    top:100px;
     left:500px;
 }
 
 .rest{
     position: relative;
-    top:-350px;
+    top:-400px;
     left: 800px;
 }
 
 .erase{
     position: relative;
-    top:-350px;
+    top:-400px;
     left: 670px;
 }
 
@@ -24,4 +24,10 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.colorChanger{
+    position: relative;
+    top: -55px;
+    left: 400px;
 }
