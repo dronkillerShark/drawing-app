@@ -1,18 +1,18 @@
 .drawingCanvas{
     position: relative;
-    top:100px;
-    left:500px;
+    top:150px;
+    left:-150px;
 }
 
 .rest{
     position: relative;
-    top:-400px;
+    top:-300px;
     left: 800px;
 }
 
 .erase{
     position: relative;
-    top:-400px;
+    top:-300px;
     left: 670px;
 }
 
@@ -26,8 +26,52 @@
     box-sizing: border-box;
 }
 
-.colorChanger{
+.button {
+    background-color: red;
+    border: 0px;
+    border-radius: 50%;
+    color: white;
+    padding: 20px;
+    display: inline-block;
+    margin: 4px 2px;
     position: relative;
-    top: -55px;
+    top: -450px;
     left: 400px;
+}
+
+.active{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.red{background-color: red;}
+.blue{background-color: blue;}
+.green{background-color: green;}
+
+.brown{background-color: brown;}
+.grey{background-color: grey;}
+.pink{background-color: pink;}
+
+.yellow{background-color: yellow;}
+.black{background-color: black;}
+.navy{background-color: navy;}
+
+.maroon{background-color: maroon;}
+
+.purple{
+    position: relative;
+    top: -400px;
+    left: -80px;
+    background-color: purple;
+}
+.orange{
+    position: relative;
+    top: -400px;
+    left: -80px;
+    background-color: orange;
+}
+.aqua{
+    position: relative;
+    top: -400px;
+    left: -80px;
+    background-color: aqua;
 }
