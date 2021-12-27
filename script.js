@@ -42,6 +42,7 @@ changeSize.addEventListener("click", (e)=>{
     e.preventDefault();
     err.textContent = "";
     size = Number(sizeInput.value);
+    if(size > 1000) size = 1000;
     if(!size){
         err.style.color = "red";
         err.textContent = "please type a number!";
@@ -51,8 +52,9 @@ changeSize.addEventListener("click", (e)=>{
 
 const createNewPixel = function(e){
     ctx.fillStyle = color;
-    ctx.fillRect((e.clientX - canvas.getBoundingClientRect().x), (e.clientY - canvas.getBoundingClientRect().y), size, size);
-    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc((e.clientX - canvas.getBoundingClientRect().x), (e.clientY - canvas.getBoundingClientRect().y), size, 0, 2 * Math.PI);
+    ctx.fill();
 }
 
 const removePixel = function(e){
