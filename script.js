@@ -56,7 +56,7 @@ const createNewPixel = function(e){
 }
 
 const removePixel = function(e){
-    ctx.clearRect((e.clientX - 630), (e.clientY - 215), size, size);
+    ctx.clearRect((e.clientX - canvas.getBoundingClientRect().x), (e.clientY - canvas.getBoundingClientRect().y), size, size);
 }
 
 drawingCanvas.addEventListener("pointermove", (e) =>{
