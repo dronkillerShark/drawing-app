@@ -13,8 +13,10 @@ let isDown = false;
 let color = `rgb(0, 0, 0)`;
 let size = 5;
 let isErase = false;
+let prevX = null;
+let prevY = null;
 
-    Btns.forEach((e, i) => {
+    Btns.forEach((e) => {
     e.addEventListener("click", () => {
     Btns.forEach((s) => {
         if(s.classList.contains("active")) s.classList.remove("active");
@@ -70,9 +72,26 @@ drawingCanvas.addEventListener("pointermove", (e) =>{
         document.body.style.cursor = 'default';
         isDown = false;
     })
+    ctx.lineWidth = size;
+    ctx.strokeStyle = color;
+    if(prevX == null || prevY == null && !isDown){
+        prevX = e.clientX - canvas.getBoundingClientRect().x;
+        prevY = e.clientY - canvas.getBoundingClientRect().y;
+        return 0;
+    } 
+
+    let currentX = e.clientX - canvas.getBoundingClientRect().x;
+    let currentY = e.clientY - canvas.getBoundingClientRect().y;
     if(isDown && !isErase){
-        createNewPixel(e);
-    } else if (isDown && isErase){
+        ctx.beginPath();
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(currentX, currentY);
+        ctx.stroke();
+    }
+
+    prevX = currentX;
+    prevY = currentY;
+     if (isDown && isErase){
         removePixel(e);
     }
 })
